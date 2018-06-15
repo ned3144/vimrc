@@ -72,6 +72,7 @@ autocmd BufWritePre * %s/\s\+$//e
 set relativenumber
 set number
 set encoding=utf-8
+set splitright
 
 :command WQ wq
 :command Wq wq
@@ -81,6 +82,8 @@ set encoding=utf-8
 nnoremap <C-S-PageDown> :tabprevious<CR>
 nnoremap <C-S-PageUp>   :tabnext<CR>
 nnoremap <C-t>     :tabnew<CR>
+
+nnoremap <C-g>     :Gstatus<CR>
 
 let g:ycm_autoclose_preview_window_after_completion=1
 map <leader>g  :YcmCompleter GoToDefinitionElseDeclaration<CR>
@@ -96,4 +99,10 @@ if 'VIRTUAL_ENV' in os.environ:
 EOF
 
 let python_highlight_all=1
+
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+map <C-n> :NERDTreeToggle<CR>
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+let NERDTreeMapOpenInTab='t'
 
