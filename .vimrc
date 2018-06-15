@@ -1,4 +1,5 @@
 set nocompatible              " be iMproved, required
+syntax on
 filetype off                  " required
 
 " set the runtime path to include Vundle and initialize
@@ -16,6 +17,14 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'tmhedberg/SimpylFold'
 Plugin 'vim-scripts/indentpython.vim'
 Bundle 'Valloric/YouCompleteMe'
+Plugin 'vim-syntastic/syntastic'
+Plugin 'nvie/vim-flake8'
+Plugin 'scrooloose/nerdtree'
+Plugin 'jistr/vim-nerdtree-tabs'
+let NERDTreeIgnore=['\.pyc$', '\~$'] "ignore files in NERDTree
+Plugin 'kien/ctrlp.vim'
+Plugin 'tpope/vim-fugitive'
+Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 
 
 " All of your Plugins must be added before the following line
@@ -85,3 +94,6 @@ if 'VIRTUAL_ENV' in os.environ:
     activate_this = os.path.join(project_base_dir, 'bin/activate_this.py')
     execfile(activate_this, dict(__file__=activate_this))
 EOF
+
+let python_highlight_all=1
+
