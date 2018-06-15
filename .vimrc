@@ -69,6 +69,6 @@ set encoding=utf-8
 :command W w
 :command Q q
 
-nnoremap <C-PageDown> :tabprevious<CR>
-nnoremap <C-PageUp>   :tabnext<CR>
+nnoremap <C-S-PageDown> :tabprevious<CR>
+nnoremap <C-S-PageUp>   :tabnext<CR>
 nnoremap <C-t>     :tabnew<CR>
