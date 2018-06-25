@@ -117,3 +117,10 @@ let g:jsx_ext_required = 0
 let g:syntastic_javascript_checkers = ['eslint']
 
 autocmd Filetype html,javascript setlocal ts=2 sts=2 sw=2
+autocmd FileType js UltiSnipsAddFiletypes javascript-es6
+
+inoremap ( ()<Esc>i
+inoremap ( ()<Esc>i
+inoremap { {}<Esc>i
+inoremap [ []<Esc>i
+
