@@ -124,3 +124,5 @@ inoremap ( ()<Esc>i
 inoremap { {}<Esc>i
 inoremap [ []<Esc>i
 
+set incsearch
+map <F9> :!eslint --fix %<CR>
