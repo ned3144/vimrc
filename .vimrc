@@ -28,6 +28,7 @@ Plugin 'mxw/vim-jsx'
 Plugin 'mattn/emmet-vim'
 Plugin 'w0rp/ale'
 Plugin 'skywind3000/asyncrun.vim'
+Plugin 'scrooloose/nerdcommenter'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -123,6 +124,11 @@ inoremap ( ()<Esc>i
 inoremap ( ()<Esc>i
 inoremap { {}<Esc>i
 inoremap [ []<Esc>i
+inoremap " ""<Esc>i
+inoremap ' ''<Esc>i
 
 set incsearch
 map <F9> :!eslint --fix %<CR>
+
+let g:NERDCompactSexyComs = 1
+
