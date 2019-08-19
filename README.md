@@ -23,7 +23,7 @@
 | ^^           | f   | Cell 2        |
 | ^^           | f   | Cell 3        |
 
-```c
+```json
 {
   "firstName": "John",
   "lastName": "Smith",
